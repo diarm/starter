@@ -6,5 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Title from siteMetadata`,
+    diarm: 'Diarm'
+  },
+  plugins: [
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'kcrfgs9y',
+        dataset: 'production',
+        watchMode: 'true'
+      }
+    }
+  ]
 }
